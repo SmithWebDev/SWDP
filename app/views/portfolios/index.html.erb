@@ -8,5 +8,5 @@
   <p><%= pi.body%></p>
   <%= image_tag pi.thumb_image unless pi.thumb_image.nil?%>
   <%= link_to "Edit", edit_portfolio_path(pi ) %>
-  <%# link_to "Delete", %>
+  <%= link_to "Delete", portfolio_path(pi), method: :delete, data: {confirm: 'Are you sure?'} %>
 <% end %>
