@@ -1,0 +1,60 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AddPostStatusToBlog	app/models/add_post_status_to_blog.rb	/^class AddPostStatusToBlog < ApplicationRecord$/;"	c
+AddSlugToBlogs	db/migrate/20200706175847_add_slug_to_blogs.rb	/^class AddSlugToBlogs < ActiveRecord::Migration[5.2]$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:SWD
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+Blog	app/models/blog.rb	/^class Blog < ApplicationRecord$/;"	c
+BlogsController	app/controllers/blogs_controller.rb	/^class BlogsController < ApplicationController$/;"	c
+BlogsHelper	app/helpers/blogs_helper.rb	/^module BlogsHelper$/;"	m
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable
+CreateAddPostStatusToBlogs	db/migrate/20200706194539_create_add_post_status_to_blogs.rb	/^class CreateAddPostStatusToBlogs < ActiveRecord::Migration[5.2]$/;"	c
+CreateBlogs	db/migrate/20200702053640_create_blogs.rb	/^class CreateBlogs < ActiveRecord::Migration[5.2]$/;"	c
+CreateFriendlyIdSlugs	db/migrate/20200706170151_create_friendly_id_slugs.rb	/^class CreateFriendlyIdSlugs < MIGRATION_CLASS$/;"	c
+CreatePortfolios	db/migrate/20200703192744_create_portfolios.rb	/^class CreatePortfolios < ActiveRecord::Migration[5.2]$/;"	c
+CreateSkills	db/migrate/20200703142353_create_skills.rb	/^class CreateSkills < ActiveRecord::Migration[5.2]$/;"	c
+PagesController	app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
+PagesHelper	app/helpers/pages_helper.rb	/^module PagesHelper$/;"	m
+Portfolio	app/models/portfolio.rb	/^class Portfolio < ApplicationRecord$/;"	c
+PortfoliosController	app/controllers/portfolios_controller.rb	/^class PortfoliosController < ApplicationController$/;"	c
+PortfoliosHelper	app/helpers/portfolios_helper.rb	/^module PortfoliosHelper$/;"	m
+SWD	config/application.rb	/^module SWD$/;"	m
+Skill	app/models/skill.rb	/^class Skill < ApplicationRecord$/;"	c
+about	app/controllers/pages_controller.rb	/^  def about$/;"	f	class:PagesController
+blog_params	app/controllers/blogs_controller.rb	/^    def blog_params$/;"	f	class:BlogsController
+change	db/migrate/20200702053640_create_blogs.rb	/^  def change$/;"	f	class:CreateBlogs
+change	db/migrate/20200703142353_create_skills.rb	/^  def change$/;"	f	class:CreateSkills
+change	db/migrate/20200703192744_create_portfolios.rb	/^  def change$/;"	f	class:CreatePortfolios
+change	db/migrate/20200706170151_create_friendly_id_slugs.rb	/^  def change$/;"	f	class:CreateFriendlyIdSlugs
+change	db/migrate/20200706175847_add_slug_to_blogs.rb	/^  def change$/;"	f	class:AddSlugToBlogs
+change	db/migrate/20200706194539_create_add_post_status_to_blogs.rb	/^  def change$/;"	f	class:CreateAddPostStatusToBlogs
+contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
+create	app/controllers/blogs_controller.rb	/^  def create$/;"	f	class:BlogsController
+create	app/controllers/portfolios_controller.rb	/^  def create$/;"	f	class:PortfoliosController
+destroy	app/controllers/blogs_controller.rb	/^  def destroy$/;"	f	class:BlogsController
+destroy	app/controllers/portfolios_controller.rb	/^  def destroy$/;"	f	class:PortfoliosController
+edit	app/controllers/blogs_controller.rb	/^  def edit$/;"	f	class:BlogsController
+edit	app/controllers/portfolios_controller.rb	/^  def edit$/;"	f	class:PortfoliosController
+home	app/controllers/pages_controller.rb	/^  def home$/;"	f	class:PagesController
+index	app/controllers/blogs_controller.rb	/^  def index$/;"	f	class:BlogsController
+index	app/controllers/portfolios_controller.rb	/^  def index$/;"	f	class:PortfoliosController
+new	app/controllers/blogs_controller.rb	/^  def new$/;"	f	class:BlogsController
+new	app/controllers/portfolios_controller.rb	/^  def new$/;"	f	class:PortfoliosController
+set_blog	app/controllers/blogs_controller.rb	/^    def set_blog$/;"	f	class:BlogsController
+show	app/controllers/blogs_controller.rb	/^  def show$/;"	f	class:BlogsController
+show	app/controllers/portfolios_controller.rb	/^  def show$/;"	f	class:PortfoliosController
+system!	bin/setup	/^def system!(*args)$/;"	f
+system!	bin/update	/^def system!(*args)$/;"	f
+update	app/controllers/blogs_controller.rb	/^  def update$/;"	f	class:BlogsController
+update	app/controllers/portfolios_controller.rb	/^  def update$/;"	f	class:PortfoliosController
