@@ -1,11 +1,13 @@
 class Portfolio < ApplicationRecord
   has_many :technologies
+  accepts_nested_attributes_for :technologies, 
+                                reject_if: lambda { |attr| attr['name'].blank? }
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
-  #Methods that works as a specific database query for better category management
+  #Methods that works as a specific database query for category management
   def self.ruby
-    where(subtitle: 'Ruby')
+    where(subtitle: 'Ruby') #Though an acceptable means, it becomes extremely fragile if the string is misspelled.
   end
 
   #Same as above, but using the scope syntax
