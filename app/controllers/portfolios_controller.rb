@@ -1,8 +1,12 @@
-class PortfoliosController < ApplicationController
+ class PortfoliosController < ApplicationController
   def index
     @portfolio_items = Portfolio.all
   end
 
+  def ruby     #Example of custom controller for hard coded category routing
+    @ruby_portfolio_items = Portfolio.ruby 
+  end
+  
   def new
     @portfolio_item = Portfolio.new
   end
