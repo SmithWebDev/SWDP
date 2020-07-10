@@ -11,7 +11,7 @@ end
   )
 end
 
-puts "10 blog posts created"
+puts '10 blog posts created'
 
 5.times do |skill|
   Skill.create!(
@@ -20,7 +20,7 @@ puts "10 blog posts created"
   )
 end
 
-puts "5 skills created"
+puts '5 skills created'
 
 
 8.times do |portfolio|
@@ -41,4 +41,11 @@ end
     thumb_image: "https://via.placeholder.com/350x200",
   )
 end
-puts "9 portfolios created."
+puts '9 portfolios created.'
+
+3.times do |tech|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{tech}",
+  )
+end
+puts '3 technologies created'
