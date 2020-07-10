@@ -3,11 +3,25 @@ class Portfolio < ApplicationRecord
 
   #Methods that works as a specific database query for better category management
   def self.ruby
-    where(subtitle: "Ruby")
+    where(subtitle: 'Ruby')
   end
 
-  scope :rails_portfolio_item, -> {where(subtitle: "Ruby on Rails")}
-  #  def self.rails
-  #    where(subtitle: "Ruby on Rails")
-  #  end
+  #Same as above, but using the scope syntax
+  scope :rails_portfolio_item, -> {where(subtitle: 'Ruby on Rails')}
+
+  #Process that runs after something happens such as going to a form
+  after_initialize :set_defaults
+
+  #Creates default options for the main and thumb image attributes. 
+  #|| operator needed. Without operater all created data would be overriden by
+  #default value
+  def set_defaults
+    self.main_image ||= 'https://via.placeholder.com/600x400'
+    self.thumb_image ||= 'https://via.placeholder.com/350x200'
+  end
+
+  #The above syntax is a shorthanded way to write a conditional statement
+  #if self.main_image = nil
+    #self.main_image = 'https://via.placeholder.com/600x400'
+  #end
 end
