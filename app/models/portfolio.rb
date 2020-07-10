@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
   #Methods that works as a specific database query for better category management
@@ -16,8 +17,8 @@ class Portfolio < ApplicationRecord
   #|| operator needed. Without operater all created data would be overriden by
   #default value
   def set_defaults
-    self.main_image ||= 'https://via.placeholder.com/600x400'
-    self.thumb_image ||= 'https://via.placeholder.com/350x200'
+    self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
+    self.thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
   end
 
   #The above syntax is a shorthanded way to write a conditional statement
