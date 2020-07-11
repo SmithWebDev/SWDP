@@ -1,0 +1,11 @@
+
+<%= link_to "Create New Item", new_portfolio_path %>
+
+<% @ruby_portfolio_items.each do |pi|%>
+  <p><%= link_to pi.title, portfolio_show_path(pi) %></p>
+  <p><%= pi.subtitle %></p>
+  <p><%= pi.body%></p>
+  <%= image_tag pi.thumb_image unless pi.thumb_image.nil?%>
+  <%= link_to "Edit", edit_portfolio_path(pi) %>
+  <%= link_to "Delete", portfolio_path(pi), method: :delete, data: {confirm: 'Are you sure?'} %>
+<% end %>

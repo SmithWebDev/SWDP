@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
+  #Custom Routing for portfolio items
+  get 'ruby-items', to: 'portfolios#ruby'  #Hard-coded example to access ruby category
+
   #Resource routes
   resources :blogs do
     member do
