@@ -1,4 +1,4 @@
-<h1>Homepage</h1>
+<h1>Hello, <%= current_user.first_name if current_user %></h1>
 
 <h1>Blog Posts</h1>
 <%= @posts.inspect %>
