@@ -29,5 +29,9 @@ module SWD
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    #Allows strong params to be input without need for explicit .permit being
+    #apphended to strong params.
+    #config.action_controller.permit_all_parameters = true
   end
 end
