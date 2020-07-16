@@ -1,6 +1,7 @@
  class PortfoliosController < ApplicationController
   def index
     @portfolio_items = Portfolio.all
+   # @page_title = "My Portfolio"
   end
 
   def ruby     #Example of custom controller for hard coded category routing
