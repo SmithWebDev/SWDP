@@ -14,14 +14,8 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
-    <div>
-      <div><%= link_to 'Home', root_path %></div>
-      <div><%= link_to 'About', about_path %></div>
-      <div><%= link_to 'Contact', contact_path %></div>
-      <div><%= link_to 'Blog', blogs_path %></div>
-      <div><%= link_to 'Portfolio', portfolios_path %></div>
-    </div>
-    <!--Since we've added the OpenStruct to the controller, our new current_user method will continue to be logged in. In order to differentiate between a User that is fully logged in, we use the Class argument to use the logged in User data. -->
+    <%= render 'shared/navbar', location: 'bottom' %>
+
     <% if current_user.is_a?(User) %>
       <%= link_to "Signout", destroy_user_session_path, method: :delete %>
     <% else %>
