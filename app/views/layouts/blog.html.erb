@@ -17,9 +17,7 @@
     <%= login_helper %>
     
     <%= yield %>
-    <% if session[:source] %>
-      <p>Thanks for visiting from <%= session[:source] %></p>
-    <% end %>
+    <%= source_helper("blog") %>
     <%= render 'shared/navbar', location: 'top' %>
   </body>
   </html>
