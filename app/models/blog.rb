@@ -5,5 +5,5 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body #Ensures title and body attributes are created with each instance of a Blog
 
-  belongs_to :topic    #Database relationship Blogs are owned by Topic
+  belongs_to :topic, optional: true    #Database relationship Blogs are owned by Topic
 end
