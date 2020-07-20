@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/SmithWebDev/SmithViewTool.git
+  revision: c2e09b9f86c4adfdccca1efacd0a8b91282678e7
+  specs:
+    Smith_View_Tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -199,6 +205,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  Smith_View_Tool!
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.0.0.alpha6)
   byebug
