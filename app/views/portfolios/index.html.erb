@@ -1,6 +1,6 @@
 <h1>Portfolio Items</h1>
 
-<%= link_to "Create New Item", new_portfolio_path %>
+<%= link_to "Create New Item", new_portfolio_path if logged_in?(:site_admin) %>
 
 <!-- Manual Collection requires to explicitly state the name of the partial, and direct the collection to the instance variable-->
 <%= render partial: 'portfolio_item', collection: @portfolio_items  %>
