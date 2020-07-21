@@ -128,9 +128,6 @@ body {
 }
 
 
-/*
- * Affix and center
- */
 
 @media (min-width: 40em) {
   /* Pull out the header and footer */
@@ -160,4 +157,18 @@ body {
   .cover-container {
     width: 55rem;
   }
+}
+
+/*
+ * Custom Styles 
+ */
+.card-block {
+  color: black;
+  text-align: left;
+}
+.row {
+  margin: 0;
+}
+.auth-links a {
+  color: black;
 }
