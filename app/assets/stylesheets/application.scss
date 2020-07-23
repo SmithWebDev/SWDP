@@ -4,7 +4,6 @@
 /*
  * Globals
  */
-
 /* Links */
 a,
 a:focus,
@@ -163,12 +162,14 @@ body {
  * Custom Styles 
  */
 .card-block {
-  color: black;
+ color: black;
   text-align: left;
 }
-.row {
-  margin: 0;
-}
+
 .auth-links a {
   color: black;
+}
+
+.register-text {
+  text-align: right;
 }
