@@ -13,13 +13,14 @@
 
   <body>
 
-<%= render 'shared/blog_nav' %>
+    <%= render 'shared/blog_nav' %>
 
     <!-- Start of blog header  -->
     <div class="blog-header">
       <div class="container">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
+        <h1 class="blog-title">My Blog</h1>
         <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+        <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
       </div>
     </div>
     <!-- End of blog header -->
@@ -81,7 +82,6 @@
 
 
     <%= source_helper("blog") %>
-    <%= render 'shared/navbar', location: 'top' %>
 
 
 
