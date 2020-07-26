@@ -7,6 +7,14 @@
    # @page_title = "My Portfolio"
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    render nothing: true
+  end
+
   def ruby     #Example of custom controller for hard coded category routing
     @ruby_portfolio_items = Portfolio.ruby 
   end
