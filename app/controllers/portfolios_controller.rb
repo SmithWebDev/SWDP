@@ -3,7 +3,7 @@
    layout 'portfolio'
    access all: [:show, :index, :ruby], user: {except: [:edit, :new, :create, :update, :destroy]}, site_admin: :all
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
    # @page_title = "My Portfolio"
   end
 

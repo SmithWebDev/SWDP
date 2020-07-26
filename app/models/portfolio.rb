@@ -24,6 +24,9 @@ class Portfolio < ApplicationRecord
     self.thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
   end
 
+  def self.by_position
+    order("position ASC")
+  end
   #The above syntax is a shorthanded way to write a conditional statement
   #if self.main_image = nil
     #self.main_image = 'https://via.placeholder.com/600x400'
