@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container port-container">
   <div class="row">
-    <div class="col-md-7"><%= image_tag @portfolio_item.main_image %></div>
+    <div class="col-md-7"><%= image_tag @portfolio_item.main_image.url, width: "100%" %></div>
     <div class="col-md-5">
 
       <h1><%= @portfolio_item.title %></h1>
