@@ -89,6 +89,7 @@ GEM
     carrierwave-aws (1.5.0)
       aws-sdk-s3 (~> 1.0)
       carrierwave (~> 2.0)
+    cocoon (1.2.14)
     coderay (1.1.3)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -269,6 +270,7 @@ DEPENDENCIES
   byebug
   carrierwave (~> 2.1)
   carrierwave-aws (~> 1.5)
+  cocoon (~> 1.2, >= 1.2.14)
   coffee-rails (~> 4.2)
   devise (~> 4.7, >= 4.7.2)
   dotenv-rails (~> 2.7, >= 2.7.6)

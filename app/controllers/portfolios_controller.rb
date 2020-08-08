@@ -1,10 +1,10 @@
- class PortfoliosController < ApplicationController
-   before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
-   layout 'portfolio'
-   access all: [:show, :index, :ruby], user: {except: [:edit, :new, :create, :update, :destroy, :sort]}, site_admin: :all
+class PortfoliosController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
+  layout 'portfolio'
+  access all: [:show, :index, :ruby], user: {except: [:edit, :new, :create, :update, :destroy, :sort]}, site_admin: :all
   def index
     @portfolio_items = Portfolio.by_position
-   # @page_title = "My Portfolio"
+    # @page_title = "My Portfolio"
   end
 
   def sort
@@ -18,10 +18,9 @@
   def ruby     #Example of custom controller for hard coded category routing
     @ruby_portfolio_items = Portfolio.ruby 
   end
-  
+
   def new
     @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build } #hard coded 3 attributes for technologies
   end
 
   def create
@@ -64,7 +63,7 @@
                                       :body, 
                                       :main_image,
                                       :thumb_image,
-                                      technologies_attributes: [:name]
+                                      technologies_attributes: [:id, :name, :_destroy]
                                      )
   end
   def set_portfolio_item
