@@ -6,4 +6,15 @@ class Blog < ApplicationRecord
   validates_presence_of :title, :body #Ensures title and body attributes are created with each instance of a Blog
 
   belongs_to :topic, optional: true    #Database relationship Blogs are owned by Topic
+
+  has_many :comments, dependent: :destroy
+
+  def self.special_blogs
+    all
+  end
+
+  def featured_blogs
+    limit(2)
+  end
+
 end
