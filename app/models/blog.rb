@@ -3,7 +3,7 @@ class Blog < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged    #Applies friendly_id gem to the title of blogs for better routing
 
-  validates_presence_of :title, :body #Ensures title and body attributes are created with each instance of a Blog
+  validates_presence_of :title, :body, :topic_id #Ensures title, body, and topic_id attributes are created with each instance of a Blog
 
   belongs_to :topic, optional: true    #Database relationship Blogs are owned by Topic
 
