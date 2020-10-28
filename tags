@@ -4,8 +4,12 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-AddPostStatusToBlog	app/models/add_post_status_to_blog.rb	/^class AddPostStatusToBlog < ApplicationRecord$/;"	c
+AddBadgeToSkills	db/migrate/20200710014307_add_badge_to_skills.rb	/^class AddBadgeToSkills < ActiveRecord::Migration[5.2]$/;"	c
+AddPositionToPortfolios	db/migrate/20200726142636_add_position_to_portfolios.rb	/^class AddPositionToPortfolios < ActiveRecord::Migration[5.2]$/;"	c
+AddPostStatusToBlogs	db/migrate/20200706204347_add_post_status_to_blogs.rb	/^class AddPostStatusToBlogs < ActiveRecord::Migration[5.2]$/;"	c
+AddRolesToUsers	db/migrate/20200720211948_add_roles_to_users.rb	/^class AddRolesToUsers < ActiveRecord::Migration[5.2]$/;"	c
 AddSlugToBlogs	db/migrate/20200706175847_add_slug_to_blogs.rb	/^class AddSlugToBlogs < ActiveRecord::Migration[5.2]$/;"	c
+AddTopicReferenceToBlogs	db/migrate/20200709170220_add_topic_reference_to_blogs.rb	/^class AddTopicReferenceToBlogs < ActiveRecord::Migration[5.2]$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:SWD
 ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
 ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
@@ -15,46 +19,164 @@ ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::B
 ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
 ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
 Blog	app/models/blog.rb	/^class Blog < ApplicationRecord$/;"	c
+BlogsChannel	app/channels/blogs_channel.rb	/^class BlogsChannel < ApplicationCable::Channel$/;"	c
 BlogsController	app/controllers/blogs_controller.rb	/^class BlogsController < ApplicationController$/;"	c
 BlogsHelper	app/helpers/blogs_helper.rb	/^module BlogsHelper$/;"	m
 Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
+Comment	app/models/comment.rb	/^class Comment < ApplicationRecord$/;"	c
+CommentBroadcastJob	app/jobs/comment_broadcast_job.rb	/^class CommentBroadcastJob < ApplicationJob$/;"	c
+CommentsController	app/controllers/comments_controller.rb	/^class CommentsController < ApplicationController$/;"	c
+CommentsHelper	app/helpers/comments_helper.rb	/^module CommentsHelper$/;"	m
 Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable
-CreateAddPostStatusToBlogs	db/migrate/20200706194539_create_add_post_status_to_blogs.rb	/^class CreateAddPostStatusToBlogs < ActiveRecord::Migration[5.2]$/;"	c
 CreateBlogs	db/migrate/20200702053640_create_blogs.rb	/^class CreateBlogs < ActiveRecord::Migration[5.2]$/;"	c
+CreateComments	db/migrate/20200815173828_create_comments.rb	/^class CreateComments < ActiveRecord::Migration[5.2]$/;"	c
 CreateFriendlyIdSlugs	db/migrate/20200706170151_create_friendly_id_slugs.rb	/^class CreateFriendlyIdSlugs < MIGRATION_CLASS$/;"	c
 CreatePortfolios	db/migrate/20200703192744_create_portfolios.rb	/^class CreatePortfolios < ActiveRecord::Migration[5.2]$/;"	c
 CreateSkills	db/migrate/20200703142353_create_skills.rb	/^class CreateSkills < ActiveRecord::Migration[5.2]$/;"	c
+CreateTechnologies	db/migrate/20200710195936_create_technologies.rb	/^class CreateTechnologies < ActiveRecord::Migration[5.2]$/;"	c
+CreateTopics	db/migrate/20200709165428_create_topics.rb	/^class CreateTopics < ActiveRecord::Migration[5.2]$/;"	c
+CurrentUserConcern	app/controllers/concerns/current_user_concern.rb	/^module CurrentUserConcern$/;"	m
+DefaultPageContent	app/controllers/concerns/default_page_content.rb	/^module DefaultPageContent$/;"	m
+DeviseCreateUsers	db/migrate/20200711011609_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration[5.2]$/;"	c
+DeviseWhitelist	app/controllers/concerns/devise_whitelist.rb	/^module DeviseWhitelist$/;"	m
+GuestUser	app/models/guest_user.rb	/^class GuestUser < User$/;"	c
 PagesController	app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
 PagesHelper	app/helpers/pages_helper.rb	/^module PagesHelper$/;"	m
+Placeholder	app/models/concerns/placeholder.rb	/^module Placeholder$/;"	m
 Portfolio	app/models/portfolio.rb	/^class Portfolio < ApplicationRecord$/;"	c
+PortfolioUploader	app/uploaders/portfolio_uploader.rb	/^class PortfolioUploader < CarrierWave::Uploader::Base$/;"	c
 PortfoliosController	app/controllers/portfolios_controller.rb	/^class PortfoliosController < ApplicationController$/;"	c
 PortfoliosHelper	app/helpers/portfolios_helper.rb	/^module PortfoliosHelper$/;"	m
 SWD	config/application.rb	/^module SWD$/;"	m
+SetSource	app/controllers/concerns/set_source.rb	/^module SetSource$/;"	m
 Skill	app/models/skill.rb	/^class Skill < ApplicationRecord$/;"	c
+Technology	app/models/technology.rb	/^class Technology < ApplicationRecord$/;"	c
+TestUser	app/models/test_user.rb	/^class TestUser < User$/;"	c
+Topic	app/models/topic.rb	/^class Topic < ApplicationRecord$/;"	c
+TopicHelper	app/helpers/topic_helper.rb	/^module TopicHelper$/;"	m
+TopicsController	app/controllers/topics_controller.rb	/^class TopicsController < ApplicationController$/;"	c
+TopicsHelper	app/helpers/topics_helper.rb	/^module TopicsHelper$/;"	m
+User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
+_addGhostPos	app/assets/javascripts/html.sortable.js	/^var _addGhostPos = function(event, ghost) {$/;"	f
+_after	app/assets/javascripts/html.sortable.js	/^var _after = function(target, element) {$/;"	f
+_attachGhost	app/assets/javascripts/html.sortable.js	/^var _attachGhost = function(event, ghost) {$/;"	f
+_attached	app/assets/javascripts/html.sortable.js	/^var _attached = function(element) {$/;"	f
+_attr	app/assets/javascripts/html.sortable.js	/^var _attr = function(element, attribute, value) {$/;"	f
+_before	app/assets/javascripts/html.sortable.js	/^var _before = function(target, element) {$/;"	f
+_data	app/assets/javascripts/html.sortable.js	/^var _data = function(element, key, value) {$/;"	f
+_destroySortable	app/assets/javascripts/html.sortable.js	/^var _destroySortable = function(sortableElement) {$/;"	f
+_detach	app/assets/javascripts/html.sortable.js	/^var _detach = function(element) {$/;"	f
+_disableSortable	app/assets/javascripts/html.sortable.js	/^var _disableSortable = function(sortableElement) {$/;"	f
+_dispatchEventOnConnected	app/assets/javascripts/html.sortable.js	/^var _dispatchEventOnConnected = function(sortableElement, event) {$/;"	f
+_enableSortable	app/assets/javascripts/html.sortable.js	/^var _enableSortable = function(sortableElement) {$/;"	f
+_filter	app/assets/javascripts/html.sortable.js	/^var _filter = function(nodes, wanted) {$/;"	f
+_getGhost	app/assets/javascripts/html.sortable.js	/^var _getGhost = function(event, draggedItem) {$/;"	f
+_getHandles	app/assets/javascripts/html.sortable.js	/^var _getHandles = function(items, handle) {$/;"	f
+_html2element	app/assets/javascripts/html.sortable.js	/^var _html2element = function(html) {$/;"	f
+_index	app/assets/javascripts/html.sortable.js	/^var _index = function(element) {$/;"	f
+_listsConnected	app/assets/javascripts/html.sortable.js	/^var _listsConnected = function(curList, destList) {$/;"	f
+_makeEvent	app/assets/javascripts/html.sortable.js	/^var _makeEvent = function(name, detail) {$/;"	f
+_makeGhost	app/assets/javascripts/html.sortable.js	/^var _makeGhost = function(draggedItem) {$/;"	f
+_off	app/assets/javascripts/html.sortable.js	/^var _off = function(element, event) {$/;"	f
+_offset	app/assets/javascripts/html.sortable.js	/^var _offset = function(element) {$/;"	f
+_on	app/assets/javascripts/html.sortable.js	/^var _on = function(element, event, callback) {$/;"	f
+_reloadSortable	app/assets/javascripts/html.sortable.js	/^var _reloadSortable = function(sortableElement) {$/;"	f
+_removeAttr	app/assets/javascripts/html.sortable.js	/^var _removeAttr = function(element, attribute) {$/;"	f
+_removeData	app/assets/javascripts/html.sortable.js	/^var _removeData = function(element) {$/;"	f
+_removeItemData	app/assets/javascripts/html.sortable.js	/^var _removeItemData = function(items) {$/;"	f
+_removeItemEvents	app/assets/javascripts/html.sortable.js	/^var _removeItemEvents = function(items) {$/;"	f
+_removeSortableData	app/assets/javascripts/html.sortable.js	/^var _removeSortableData = function(sortable) {$/;"	f
+_removeSortableEvents	app/assets/javascripts/html.sortable.js	/^var _removeSortableEvents = function(sortable) {$/;"	f
 about	app/controllers/pages_controller.rb	/^  def about$/;"	f	class:PagesController
+active?	app/helpers/application_helper.rb	/^  def active? path$/;"	f	class:ApplicationHelper
+alert_generator	app/helpers/application_helper.rb	/^  def alert_generator msg$/;"	f	class:ApplicationHelper
+alerts	app/helpers/application_helper.rb	/^  def alerts$/;"	f	class:ApplicationHelper
 blog_params	app/controllers/blogs_controller.rb	/^    def blog_params$/;"	f	class:BlogsController
+by_position	app/models/portfolio.rb	/^  def self.by_position$/;"	F	class:Portfolio
+case.Element	app/assets/javascripts/html.sortable.js	/^  case 'matches' in window.Element.prototype:$/;"	c
 change	db/migrate/20200702053640_create_blogs.rb	/^  def change$/;"	f	class:CreateBlogs
 change	db/migrate/20200703142353_create_skills.rb	/^  def change$/;"	f	class:CreateSkills
 change	db/migrate/20200703192744_create_portfolios.rb	/^  def change$/;"	f	class:CreatePortfolios
 change	db/migrate/20200706170151_create_friendly_id_slugs.rb	/^  def change$/;"	f	class:CreateFriendlyIdSlugs
 change	db/migrate/20200706175847_add_slug_to_blogs.rb	/^  def change$/;"	f	class:AddSlugToBlogs
-change	db/migrate/20200706194539_create_add_post_status_to_blogs.rb	/^  def change$/;"	f	class:CreateAddPostStatusToBlogs
+change	db/migrate/20200706204347_add_post_status_to_blogs.rb	/^  def change$/;"	f	class:AddPostStatusToBlogs
+change	db/migrate/20200709165428_create_topics.rb	/^  def change$/;"	f	class:CreateTopics
+change	db/migrate/20200709170220_add_topic_reference_to_blogs.rb	/^  def change$/;"	f	class:AddTopicReferenceToBlogs
+change	db/migrate/20200710014307_add_badge_to_skills.rb	/^  def change$/;"	f	class:AddBadgeToSkills
+change	db/migrate/20200710195936_create_technologies.rb	/^  def change$/;"	f	class:CreateTechnologies
+change	db/migrate/20200711011609_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20200720211948_add_roles_to_users.rb	/^  def change$/;"	f	class:AddRolesToUsers
+change	db/migrate/20200726142636_add_position_to_portfolios.rb	/^  def change$/;"	f	class:AddPositionToPortfolios
+change	db/migrate/20200815173828_create_comments.rb	/^  def change$/;"	f	class:CreateComments
+comment_params	app/controllers/comments_controller.rb	/^  def comment_params$/;"	f	class:CommentsController
+configure_permitted_parameters	app/controllers/concerns/devise_whitelist.rb	/^  def configure_permitted_parameters$/;"	f	class:DeviseWhitelist
+connect	app/channels/application_cable/connection.rb	/^    def connect$/;"	f	class:ApplicationCable.Connection
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
+copyright_generator	app/helpers/application_helper.rb	/^  def copyright_generator$/;"	f	class:ApplicationHelper
 create	app/controllers/blogs_controller.rb	/^  def create$/;"	f	class:BlogsController
+create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
 create	app/controllers/portfolios_controller.rb	/^  def create$/;"	f	class:PortfoliosController
+current_user	app/controllers/concerns/current_user_concern.rb	/^  def current_user$/;"	f	class:CurrentUserConcern
 destroy	app/controllers/blogs_controller.rb	/^  def destroy$/;"	f	class:BlogsController
 destroy	app/controllers/portfolios_controller.rb	/^  def destroy$/;"	f	class:PortfoliosController
+dragging	app/assets/javascripts/html.sortable.js	/^var dragging;$/;"	v
+draggingHeight	app/assets/javascripts/html.sortable.js	/^var draggingHeight;$/;"	v
 edit	app/controllers/blogs_controller.rb	/^  def edit$/;"	f	class:BlogsController
 edit	app/controllers/portfolios_controller.rb	/^  def edit$/;"	f	class:PortfoliosController
+extension_whitelist	app/uploaders/portfolio_uploader.rb	/^  def extension_whitelist$/;"	f	class:PortfolioUploader
+featured_blogs	app/models/blog.rb	/^  def featured_blogs$/;"	f	class:Blog
+find_verified_user	app/channels/application_cable/connection.rb	/^    def find_verified_user$/;"	f	class:ApplicationCable.Connection
+first_name	app/models/user.rb	/^  def first_name$/;"	f	class:User
+gravatar_helper	app/helpers/blogs_helper.rb	/^  def gravatar_helper user$/;"	f	class:BlogsHelper
+guest_user	app/channels/application_cable/connection.rb	/^    def guest_user$/;"	f	class:ApplicationCable.Connection
+guest_user	app/controllers/concerns/current_user_concern.rb	/^  def guest_user$/;"	f	class:CurrentUserConcern
 home	app/controllers/pages_controller.rb	/^  def home$/;"	f	class:PagesController
+image_generator	app/helpers/portfolios_helper.rb	/^  def image_generator(height:, width:)$/;"	f	class:PortfoliosHelper
 index	app/controllers/blogs_controller.rb	/^  def index$/;"	f	class:BlogsController
 index	app/controllers/portfolios_controller.rb	/^  def index$/;"	f	class:PortfoliosController
+index	app/controllers/topics_controller.rb	/^  def index$/;"	f	class:TopicsController
+last_name	app/models/user.rb	/^  def last_name$/;"	f	class:User
+login_helper	app/helpers/application_helper.rb	/^  def login_helper style = ''$/;"	f	class:ApplicationHelper
+matches	app/assets/javascripts/html.sortable.js	/^var matches;$/;"	v
+nav_helper	app/helpers/application_helper.rb	/^  def nav_helper style, tag_type$/;"	f	class:ApplicationHelper
+nav_items	app/helpers/application_helper.rb	/^  def nav_items$/;"	f	class:ApplicationHelper
 new	app/controllers/blogs_controller.rb	/^  def new$/;"	f	class:BlogsController
 new	app/controllers/portfolios_controller.rb	/^  def new$/;"	f	class:PortfoliosController
+perform	app/jobs/comment_broadcast_job.rb	/^  def perform(comment)$/;"	f	class:CommentBroadcastJob
+placeholders	app/assets/javascripts/html.sortable.js	/^var placeholders = [];$/;"	v
+port_img	app/helpers/portfolios_helper.rb	/^  def port_img img, type$/;"	f	class:PortfoliosHelper
+portfolio_params	app/controllers/portfolios_controller.rb	/^  def portfolio_params$/;"	f	class:PortfoliosController
+recent	app/models/blog.rb	/^  def self.recent$/;"	F	class:Blog
+render_comment	app/jobs/comment_broadcast_job.rb	/^  def render_comment(comment)$/;"	f	class:CommentBroadcastJob
+return	app/assets/javascripts/html.sortable.js	/^    return Array.prototype.slice.call(nodes);$/;"	c
+return.indexOf	app/assets/javascripts/html.sortable.js	/^  return Array.prototype.indexOf.call(element.parentElement.children, element);$/;"	m
+return.slice	app/assets/javascripts/html.sortable.js	/^    return Array.prototype.slice.call(nodes);$/;"	m
+ruby	app/controllers/portfolios_controller.rb	/^  def ruby     #Example of custom controller for hard coded category routing$/;"	f	class:PortfoliosController
+ruby	app/models/portfolio.rb	/^  def self.ruby$/;"	F	class:Portfolio
+send_comment	app/channels/blogs_channel.rb	/^  def send_comment(data)$/;"	f	class:BlogsChannel
 set_blog	app/controllers/blogs_controller.rb	/^    def set_blog$/;"	f	class:BlogsController
+set_page_defaults	app/controllers/concerns/default_page_content.rb	/^  def set_page_defaults$/;"	f	class:DefaultPageContent
+set_portfolio_item	app/controllers/portfolios_controller.rb	/^  def set_portfolio_item$/;"	f	class:PortfoliosController
+set_sidebar_topics	app/controllers/blogs_controller.rb	/^    def set_sidebar_topics$/;"	f	class:BlogsController
+set_sidebar_topics	app/controllers/topics_controller.rb	/^  def set_sidebar_topics$/;"	f	class:TopicsController
+set_source	app/controllers/concerns/set_source.rb	/^  def set_source$/;"	f	class:SetSource
 show	app/controllers/blogs_controller.rb	/^  def show$/;"	f	class:BlogsController
 show	app/controllers/portfolios_controller.rb	/^  def show$/;"	f	class:PortfoliosController
+show	app/controllers/topics_controller.rb	/^  def show$/;"	f	class:TopicsController
+sort	app/controllers/portfolios_controller.rb	/^  def sort$/;"	f	class:PortfoliosController
+sortable	app/assets/javascripts/html.sortable.js	/^var sortable = function(sortableElements, options) {$/;"	f
+sortable.destroy	app/assets/javascripts/html.sortable.js	/^sortable.destroy = function(sortableElement) {$/;"	f
+sortable.disable	app/assets/javascripts/html.sortable.js	/^sortable.disable = function(sortableElement) {$/;"	f
+sortable.enable	app/assets/javascripts/html.sortable.js	/^sortable.enable = function(sortableElement) {$/;"	f
+sortables	app/assets/javascripts/html.sortable.js	/^var sortables = [];$/;"	v
+source_helper	app/helpers/application_helper.rb	/^  def source_helper(layout_name)$/;"	f	class:ApplicationHelper
+special_blogs	app/models/blog.rb	/^  def self.special_blogs$/;"	F	class:Blog
+store_dir	app/uploaders/portfolio_uploader.rb	/^  def store_dir$/;"	f	class:PortfolioUploader
+subscribed	app/channels/blogs_channel.rb	/^  def subscribed$/;"	f	class:BlogsChannel
 system!	bin/setup	/^def system!(*args)$/;"	f
 system!	bin/update	/^def system!(*args)$/;"	f
+toggle_status	app/controllers/blogs_controller.rb	/^  def toggle_status$/;"	f	class:BlogsController
+unsubscribed	app/channels/blogs_channel.rb	/^  def unsubscribed$/;"	f	class:BlogsChannel
 update	app/controllers/blogs_controller.rb	/^  def update$/;"	f	class:BlogsController
 update	app/controllers/portfolios_controller.rb	/^  def update$/;"	f	class:PortfoliosController
+with_blogs	app/models/topic.rb	/^  def self.with_blogs$/;"	F	class:Topic
