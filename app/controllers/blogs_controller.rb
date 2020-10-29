@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  #before_action :set_sidebar_topics, except: [:update, :toggle_status, :create, :destroy]
+  before_action :set_sidebar_topics, except: [:update, :toggle_status, :create, :destroy]
   layout 'blog'
   access all: [:show, :index], user: {except: [:edit, :new, :create, :update, :destroy, :toggle_status]}, site_admin: :all
   #May include test at a later time to access param
@@ -82,6 +82,7 @@ class BlogsController < ApplicationController
     end
     redirect_to blogs_url, notice: 'Post status has been updated'
   end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
@@ -93,9 +94,7 @@ class BlogsController < ApplicationController
       params.require(:blog).permit(:title, :body, :topic_id)
     end
 
-=begin
     def set_sidebar_topics
-      @set_sidebar_topics = Topic.with_blogs
+      @side_bar_topics = Topic.with_blogs
     end
-=end
 end
