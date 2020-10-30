@@ -173,7 +173,9 @@ h6, .h6 {
 /*
  * Custom styles
  */
-
+body {
+  padding: 100px;
+}
 .social-links li {
   font-size: 2.5em;
 }
@@ -198,4 +200,8 @@ h6, .h6 {
 
 .blogcrumb a{
   font-size: 1.25em;
+}
+ 
+.blog-nav {
+  margin-bottom: 30px;
 }

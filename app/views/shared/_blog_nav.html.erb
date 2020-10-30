@@ -1,8 +1,17 @@
-<div class="blog-masthead">
+<nav class="navbar navbar-toggleable-md navbar-expand-md navbar-light bg-light fixed-top blog-nav">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
   <div class="container">
-    <nav class="nav blog-nav">
-      <%= nav_helper 'nav-link', 'span' %>
-      <%= login_helper 'nav-link' %>
-    </nav>
+    <%= link_to "D.B.Smith", root_path, class: 'navbar-brand' %>
+
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <%= nav_helper 'nav-link', 'li' %>
+        <%= login_helper 'nav-link' %>
+      </ul>
+    </div>
   </div>
-</div>
+</nav>
+
