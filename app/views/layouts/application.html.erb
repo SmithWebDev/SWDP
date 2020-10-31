@@ -3,6 +3,7 @@
   <head>
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab" rel="stylesheet">
     <meta name='keywords' content= <%= @seo_keywords %> />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
@@ -24,10 +25,10 @@
             muted: true,
             poster: 'home_bg.png'
           )%>
-          <%= render 'shared/application_nav' %>
-          <%= yield %>
-          <%= render 'shared/application_footer' %>
-          <%= alerts %>
+        <%= render 'shared/application_nav' %>
+        <%= yield %>
+        <%= render 'shared/application_footer' %>
+        <%= alerts %>
         </div>
       </div>
     </div>
