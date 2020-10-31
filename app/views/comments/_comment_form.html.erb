@@ -1,0 +1,9 @@
+  <% unless current_user.is_a? GuestUser %>
+    <%= form_for @comment, url: '#' do |f| %>
+      <div class="form-group">
+        <%= f.label :content, style: "display:none"%>
+        <%= f.text_area :content, class: 'form-control', placeholder: 'Comment?' %>
+      </div>
+      <%= f.submit 'Post Comment', class: 'btn btn-primary' %>
+    <% end %>
+  <% end %>

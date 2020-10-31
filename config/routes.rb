@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :topics, only: [:index, :show]
+  resources :comments
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   #Set root path for homepage
   root to: 'pages#home'
@@ -23,4 +25,5 @@ Rails.application.routes.draw do
   end
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  mount ActionCable.server => '/cable'
 end

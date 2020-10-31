@@ -1,5 +1,9 @@
 class Topic < ApplicationRecord
-  validates_presence_of :title  #Ensures that all Topics created has a title associated
+  validates_presence_of :title
 
-  has_many :blogs   #Database relationship showing that Topics own many blogs
+  has_many :blogs
+
+  def self.with_blogs
+    includes(:blogs).where.not(blogs: { id: nil })
+  end
 end

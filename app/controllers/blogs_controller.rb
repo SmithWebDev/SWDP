@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_sidebar_topics, except: [:update, :toggle_status, :create, :destroy]
   layout 'blog'
   access all: [:show, :index], user: {except: [:edit, :new, :create, :update, :destroy, :toggle_status]}, site_admin: :all
   #May include test at a later time to access param
@@ -7,15 +8,26 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    if logged_in?(:site_admin)
+      @blogs = Blog.recent.page(params[:page]).per(5)
+    else
+      @blogs = Blog.published.page(params[:page]).per(5)
+    end
     @page_title = "My Portfolio Blog"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @page_title = @blog.title
-    @seo_keywords = @blog.body # This would be better used with tags instead of the body of the blog post.
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+
+      @page_title = @blog.title
+      @seo_keywords = @blog.body # This would be better used with tags instead of the body of the blog post.
+    else
+      redirect_to blogs_path, notice: "You are not authorized to access this page"
+    end
   end
 
   # GET /blogs/new
@@ -70,6 +82,7 @@ class BlogsController < ApplicationController
     end
     redirect_to blogs_url, notice: 'Post status has been updated'
   end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
@@ -78,6 +91,10 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :body, :topic_id)
+      params.require(:blog).permit(:title, :body, :topic_id, :status)
+    end
+
+    def set_sidebar_topics
+      @side_bar_topics = Topic.with_blogs
     end
 end

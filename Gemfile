@@ -28,6 +28,11 @@ gem 'carrierwave-aws', '~> 1.5'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.14'
 gem 'gritter', '~> 1.2'
+gem 'redis', '~> 4.2', '>= 4.2.1'
+gem 'redcarpet', '~> 3.5'
+gem 'coderay', '~> 1.1', '>= 1.1.3'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

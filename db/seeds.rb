@@ -1,8 +1,28 @@
+User.create!(
+  email: "test@test.com",
+  password: "admin1",
+  password_confirmation: "admin1",
+  name: "Admin User",
+  roles: "site_admin"
+)
+puts "1 admin user created"
+
+
+User.create!(
+  email: "test1@test.com",
+  password: "!admin1",
+  password_confirmation: "!admin1",
+  name: "!Admin User",
+)
+puts "1 regular user created"
+
 3.times do |topic|
   Topic.create!(
     title: "Topic: #{topic}"
   )
 end
+puts "3 topics created"
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
@@ -10,7 +30,6 @@ end
     topic_id: Topic.last.id
   )
 end
-
 puts '10 blog posts created'
 
 5.times do |skill|
@@ -19,7 +38,6 @@ puts '10 blog posts created'
     percent_utilized: 16
   )
 end
-
 puts '5 skills created'
 
 
