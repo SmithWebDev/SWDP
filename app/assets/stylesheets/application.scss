@@ -207,3 +207,21 @@ body {
 .app-footer{
   color: white;
 }
+
+.app-card-container{
+  color: #000;
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.app-card-container a {
+  color: blue;
+}
+
+.profile-img {
+  border: 1px solid gray;
+}
+
