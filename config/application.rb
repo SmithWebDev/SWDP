@@ -29,6 +29,7 @@ module SWD
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
 
     #Allows strong params to be input without need for explicit .permit being
     #apphended to strong params.

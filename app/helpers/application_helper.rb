@@ -50,6 +50,7 @@ module ApplicationHelper
   def alert_generator msg
     js add_gritter(msg, title: 'SWD' , sticky: false)
   end
+
   def active? path
     "active" if current_page? path
   end
