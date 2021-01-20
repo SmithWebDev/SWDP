@@ -7,13 +7,13 @@
     
 
     <span class="ml-auto">
-      <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin) %>
-      <%= link_to fa_icon('trash'), @blog, method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} if logged_in?(:site_admin) %>
+      <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin, :tester) %>
+      <%= link_to fa_icon('trash'), @blog, method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} if logged_in?(:site_admin, :tester) %>
 
     </span>
   </nav>
   <p> <%= @blog.topic.title %></p>
-  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin, :tester) %>
   <p><%= markdown(@blog.body) %></p>
   <br>
   <hr>

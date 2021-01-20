@@ -13,7 +13,7 @@
 
   <body>
     <%= render 'shared/port_nav' %>
-    <%= render 'shared/port_masthead' unless logged_in?(:site_admin) %>
+    <%= render 'shared/port_masthead' unless logged_in?(:site_admin, :tester) %>
     <%= yield %>
     <%= render 'shared/port_footer' %>
     

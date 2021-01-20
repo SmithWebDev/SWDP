@@ -3,7 +3,7 @@
     <h1 class="blog-title"><%= link_to "My Blog", blogs_path %></h1>
     <p class="lead blog-description">An example blog template built with Bootstrap.</p>
     <span>
-      <%= link_to 'Write a New Blog |', new_blog_path if logged_in?(:site_admin) %>
+      <%= link_to 'Write a New Blog |', new_blog_path if logged_in?(:site_admin, :tester) %>
     </span>
     <span>
       <%= link_to 'Topics', topics_path %>

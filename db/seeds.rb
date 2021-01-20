@@ -13,8 +13,9 @@ User.create!(
   password: "!admin1",
   password_confirmation: "!admin1",
   name: "!Admin User",
+  roles: "tester"
 )
-puts "1 regular user created"
+puts "1 tester user created"
 
 3.times do |topic|
   Topic.create!(

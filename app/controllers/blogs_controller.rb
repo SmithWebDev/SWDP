@@ -2,13 +2,13 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   before_action :set_sidebar_topics, except: [:update, :toggle_status, :create, :destroy]
   layout 'blog'
-  access all: [:show, :index], user: {except: [:edit, :new, :create, :update, :destroy, :toggle_status]}, site_admin: :all
+  access all: [:show, :index], user: {except: [:edit, :new, :create, :update, :destroy, :toggle_status]}, tester: {except: [:create, :update, :destroy, :toggle_status]}, site_admin: :all
   #May include test at a later time to access param
 
   # GET /blogs
   # GET /blogs.json
   def index
-    if logged_in?(:site_admin)
+    if logged_in?(:site_admin, :tester)
       @blogs = Blog.recent.page(params[:page]).per(5)
     else
       @blogs = Blog.published.page(params[:page]).per(5)
@@ -19,7 +19,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    if logged_in?(:site_admin) || @blog.published?
+    if logged_in?(:site_admin, :tester) || @blog.published?
       @blog = Blog.includes(:comments).friendly.find(params[:id])
       @comment = Comment.new
 
