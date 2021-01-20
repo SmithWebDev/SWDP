@@ -1,21 +1,21 @@
-User.create!(
-  email: "test@test.com",
-  password: "admin1",
-  password_confirmation: "admin1",
-  name: "Admin User",
-  roles: "site_admin"
-)
-puts "1 admin user created"
-
-
-User.create!(
-  email: "test1@test.com",
-  password: "!admin1",
-  password_confirmation: "!admin1",
-  name: "!Admin User",
-  roles: "tester"
-)
-puts "1 tester user created"
+#User.create!(
+#  email: "test@test.com",
+#  password: "admin1",
+#  password_confirmation: "admin1",
+#  name: "Admin User",
+#  roles: "site_admin"
+#)
+#puts "1 admin user created"
+#
+#
+#User.create!(
+#  email: "test1@test.com",
+#  password: "!admin1",
+#  password_confirmation: "!admin1",
+#  name: "!Admin User",
+#  roles: "tester"
+#)
+#puts "1 tester user created"
 
 3.times do |topic|
   Topic.create!(
