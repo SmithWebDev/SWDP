@@ -1,4 +1,4 @@
-User.find_or_create_by!(
+User.create!(
   email: "test@test.com",
   password: "admin1",
   password_confirmation: "admin1",
@@ -8,7 +8,7 @@ User.find_or_create_by!(
 puts "1 admin user created"
 
 
-User.find_or_create_by!(
+User.create!(
   email: "test1@test.com",
   password: "!admin1",
   password_confirmation: "!admin1",
