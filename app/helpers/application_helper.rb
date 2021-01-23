@@ -1,4 +1,7 @@
 module ApplicationHelper
+  #def after_sign_out_path_for(resource_or_scope)
+  #  request.referrer
+  #end
 
   def nav_items
     [
@@ -62,8 +65,10 @@ module ApplicationHelper
         (link_to "Register", new_user_registration_path, class: style)
     else
       link_to "Signout", destroy_user_session_path, class: style, method: :delete
+      #redirect_to root_path
     end
   end
+  #after_sign_out_path_for()
 
   def source_helper(styles)
     if session[:source]
