@@ -16,7 +16,7 @@ class PortfoliosController < ApplicationController
   end
 
   def ruby     #Example of custom controller for hard coded category routing
-    @ruby_portfolio_items = Portfolio.ruby 
+    @ruby_portfolio_items = Portfolio.ruby
   end
 
   def new
