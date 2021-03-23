@@ -1,11 +1,11 @@
-User.create!(
-  email: "test@test.com",
-  password: "admin1",
-  password_confirmation: "admin1",
-  name: "Admin User",
-  roles: "site_admin"
-)
-puts "1 admin user created"
+#User.create!(
+#  email: "test@test.com",
+#  password: "admin1",
+#  password_confirmation: "admin1",
+#  name: "Admin User",
+#  roles: "site_admin"
+#)
+#puts "1 admin user created"
 
 
 User.create!(
